@@ -1,0 +1,406 @@
+{
+ "datosPersonaje":{
+    "nombrePersonaje":"",
+    "nombreJugador":"",
+    "nivel":1,
+    "nombreCampaña":"",
+    "hogar":"",
+    "raza":"",
+    "deidad":"",
+    "tamaño":"",
+    "sexo":"",
+    "edad":"",
+    "altura":"",
+    "peso":"",
+    "cabello":"",
+    "ojos":""
+},
+"stats":[
+    {
+        "caracteristica":"Fuerza",
+        "puntosCaracteristicas":"",
+        "modifCaracteristica":"",
+        "puntosTemporales":"",
+        "modifTemporales":""
+     },
+    {
+        "caracteristica":"Destreza",
+        "puntosCaracteristicas":"",
+        "modifCaracteristica":"",
+        "puntosTemporales":"",
+        "modifTemporales":""
+    },
+    {
+        "caracteristica":"Constitución",
+        "puntosCaracteristicas":"",
+        "modifCaracteristica":"",
+        "puntosTemporales":"",
+        "modifTemporales":""
+    },
+    {
+        "caracteristica":"Inteligencia",
+        "puntosCaracteristicas":"",
+        "modifCaracteristica":"",
+        "puntosTemporales":"",
+        "modifTemporales":""
+    },
+    {
+        "caracteristica":"Sabiduría",
+        "puntosCaracteristicas":"",
+        "modifCaracteristica":"",
+        "puntosTemporales":"",
+        "modifTemporales":""
+    },
+    {
+        "caracteristica":"Carisma",
+        "puntosCaracteristicas":"",
+        "modifCaracteristica":"",
+        "puntosTemporales":"",
+        "modifTemporales":""
+    }
+   ],
+"vida":{
+"hp":"HP MAX",
+"ReduccionDaño":"",
+"pgActuales":"",
+"dañoNoLetal":"",
+"inicitiva":{
+    "modifVarios":""
+}
+},
+"armadura":{
+ "claseArmadura":"",
+ "base":10,
+ "bonifArmadura":"",
+ "bonifEscudo":"",
+ "modifTamaño":"",
+ "armorNatural":"",
+ "modifDefleccion":"",
+ "modifVarios":"",
+ "toque":"",
+ "desprevenido":""
+},
+"tirosSalvacion":[
+   {
+     "salvacion":"fortaleza",
+     "salvacionBase":"",
+     "modifMagico":"",
+     "modifVarios":"",
+     "modifTemporales":""  
+   },
+   {
+    "salvacion":"reflejos",
+    "salvacionBase":"",
+    "modifMagico":"",
+    "modifVarios":"",
+    "modifTemporales":""  
+  },
+  {
+    "salvacion":"voluntad",
+    "salvacionBase":"",
+    "modifMagico":"",
+    "modifVarios":"",
+    "modifTemporales":""  
+  },
+  {
+    "modifExtras":""
+  }  
+],
+"ataque":{
+    "ataqueBase":"",
+    "resistenciaConjuros":"",
+    "modifTamaño":""
+},
+"armas":{
+    "nombreArma":"",
+    "ataqueArma":"",
+    "critico":"",
+    "tipoArma":"",
+    "rango":"",
+    "municion":"",
+    "daño":""
+},
+"movimientos":{
+    "velocidadBase":"",
+    "velocidadConArmadura":"",
+    "velocidadVuelo":"",
+    "nadar":"",
+    "trepar":"",
+    "cavar":"",
+    "modifTemporales":""
+},
+"habilidades":[
+{
+    "habilidad":"sigilo",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"acrobacias",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"artesanía",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"averiguar intenciones",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"cocimiento de conjuros",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"diplomacia",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"disfrazarse",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"engañar",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"escapismo",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"interpretar",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"intimidar",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"inutilizar mecanismos",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"juego de manos",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"linguistica",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"montar",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"nadar",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"profesion",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"percepcion",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(arcano)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(geografía)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(historia)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(ingeniería)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(local)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(mazmorras)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(naturaleza)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(nobleza)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(planos)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"saber(religion)",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"sanar",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"supervivencia",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"tasación",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"trato con animales",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"trepar",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"usar objeto mágico",
+    "rangos":"",
+    "modifVarios":""
+},
+{
+    "habilidad":"volar",
+    "rangos":"",
+    "modifVarios":""
+}
+
+],
+"modifCondicionales":"",
+"idiomas":"",
+"equipo":{
+    "armadura":"",
+    "bono":"",
+    "tipo":"",
+    "penalizador":"",
+    "falloConjuro":"",
+    "peso":"",
+    "propiedades":""
+},
+"posesiones":"",
+"dinero":{
+    "monedasOro":"",
+    "monedasPlata":"",
+    "monedasCobre":""
+},
+"dotes":"",
+"aptitudesEspeciales":"",
+"puntosExperiencia":{
+    "puntosActuales":"",
+    "siguienteNivel":""
+},
+"conjuros":[
+    {
+        "nivelConjuro":"0",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"1",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"2",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"3",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"4",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"5",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"6",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"7",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"8",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    },
+    {
+        "nivelConjuro":"9",
+        "conjurosConocidos":"",
+        "cdSalvacion":"",
+        "conjurosDiarios":"",
+        "conjurosAdicionales":""
+    }
+]
+}
+

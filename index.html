@@ -1,0 +1,555 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script id="character-info" type="text">
+        {
+            "datosPersonaje":{
+            "nombrePersonaje":"",
+            "nombreJugador":"",
+            "nivel":1,
+            "nombreCampaña":"",
+            "hogar":"",
+            "raza":"",
+            "deidad":"",
+            "tamaño":"",
+            "sexo":"",
+            "edad":"",
+            "altura":"",
+            "peso":"",
+            "cabello":"",
+            "ojos":""
+        }
+    }
+    </script>
+
+    <style>
+        input.text-input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid grey;
+        }
+
+        input.number-input {
+            width: 100%;
+            border: 1px solid grey;
+            text-align: center;
+        }
+        .top-buffer {
+            margin-top:20px;
+        }
+    </style> 
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        }
+   </script>
+</head>
+
+<body class="p-2">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-12 col-lg-auto">
+                <h1 class="text-center">PathFinder</h1>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="row">
+                    <div class="col-7">
+                        <input class="text-input" placeholder="Nombre del Personaje" id="nombrePersonaje" type="text">
+                    </div>
+                    <div class="col-5">
+                        <input class="text-input" placeholder="Alineamiento" id="alineamiento" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-6">
+                        <input class="text-input" placeholder="Nombre del Jugadxr " id="nombreJugador" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">      
+            <div class="offset-lg-2 col-lg-8">
+                <div class="row">
+                    <div class="col-2">
+                        <input class="text-input" placeholder="Nivel" id="nivel" type="text">
+                    </div>
+                    <div class="col-4">
+                        <input class="text-input" placeholder="Nombre Campaña" id="nombreCampaña" type="text">
+                    </div>
+                    <div class="col-4">
+                        <input class="text-input" placeholder="Hogar" id="hogar" type="text">
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <div class="row mb-2">      
+            <div class="offset-lg-2 col-lg-12">
+                <div class="row">
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Raza" id="raza" type="text">
+                    </div>
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Deidad" id="deidad" type="text">
+                    </div>
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Tamaño" id="tamaño" type="text">
+                    </div>
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Sexo" id="sexo" type="text">
+                    </div>
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Edad" id="edad" type="text">
+                    </div>
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Altura" id="altura" type="text">
+                    </div>
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Peso" id="peso" type="text">
+                    </div>
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Cabello" id="cabello" type="text">
+                    </div>
+                    <div class="col-1">
+                        <input class="text-input" placeholder="Ojos" id="ojos" type="text">
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>
+        <div class="row ">
+            <div class="col-12 col-md-8">
+                <div class="col-12 offset-md-4 col-md-4">
+                    <div class="row no-gutters">
+                        <div class="col border bg-dark text-center mr-4">
+                            <span class="text-light">PG</span>
+                        </div> 
+                        <div class="col-1 mr-2">
+                            <input class="number-input" type="text" >
+                        </div>
+                        <div class="col-1 mr-2">
+                            <input class="number-input" type="text" >
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12 col-md-12">
+                            <input class="number-input" type="text">
+                        </div>
+                        <div class="col-12 col-md-12">
+                            <input class="number-input" type="text">
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                       <div class="col border bg-dark text-center mr-4">  
+                         <span class="text-light">INICIATIVA</span> 
+                       </div>
+                       <div class="col-1 mr-3">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    </div> 
+                </div>
+
+                <!-- STATS-->
+                <div class="col-md-4">
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">FUE</span>
+                    </div> 
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" id="fuePuntoCarac" value="0">
+                    </div>
+                    <div class="col-1 mr-3">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">DES</span>
+                    </div> 
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-3">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">CON</span>
+                    </div> 
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-3">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">INT</span>
+                    </div> 
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" id="intPuntoCarac" value="0">
+                    </div>
+                    <div class="col-1 mr-3">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">SAB</span>
+                    </div> 
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-3">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">CAR</span>
+                    </div> 
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-3">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1 mr-2">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+                </div>  
+
+                <!-- CLASE DE ARMADURA--> 
+                <div class="row top-buffer no-gutters">
+                <div class="col-12 col-md-10">
+                    <div class="row">
+                        <div class="col-md-1 border bg-dark text-center">
+                            <span class="text-light">CA</span>
+                        </div> 
+                        <div class="col-md-1">
+                            <input class="number-input" placeholder="Total" type="text">
+                        </div>
+                        <div class="col-md-1">
+                            <input class="number-input" type="text" value="10">
+                        </div>
+                        <div class="col-md-1">
+                            <input class="number-input" type="text" >
+                        </div>
+                        <div class="col-md-1">
+                            <input class="number-input" type="text" >
+                        </div>
+                        <div class="col-md-1">
+                            <input class="number-input" type="text" >
+                        </div>
+                        <div class="col-md-1">
+                            <input class="number-input" type="text" >
+                        </div>
+                        <div class="col-md-1">
+                            <input class="number-input" type="text" >
+                        </div>
+                        <div class="col-md-1">
+                            <input class="number-input" type="text" >
+                        </div>
+                        <div class="col-md-1">
+                            <input class="number-input" type="text" >
+                        </div>
+                    </div>    
+                </div> 
+                   <!-- TOQUE Y DESPREVENIDO !!!-->
+                   <div class="row top-buffer no-gutters">
+                    <div class="col-12 col-md-10">
+                        <div class="row">
+                            <div class="col-md-2 border bg-dark text-center">
+                                <span class="text-light">TOQUE</span>
+                            </div> 
+                            <div class="col-md-1">
+                                <input class="number-input"  type="text">
+                            </div>
+                            <div class="col-md-3 border bg-dark text-center">
+                                <span class="text-light">DESPREVENIDO</span>
+                            </div>
+                            <div class="col-md-1">
+                                <input class="number-input" type="text" >
+                            </div>
+                        </div>    
+                    </div>    
+                    </div> 
+           </div> 
+
+           <!-- TIROS DE SALVACION -->
+           <div class="row top-buffer"></div>
+           <div class="col-md-4">
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">FORTALEZA</span>
+                    </div> 
+                    <div class="col-1 ">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1" >
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1" >
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">REFLEJOS</span>
+                    </div> 
+                    <div class="col-1 ">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1" >
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1" >
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col border bg-dark text-center mr-4">
+                        <span class="text-light">VOLUNTAD</span>
+                    </div> 
+                    <div class="col-1 ">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1" >
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1" >
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-1">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                </div>
+              
+                <!-- ATAQUE BASE-->
+                <div class="row top-buffer"></div>
+           <div class="col-md-12">
+                <div class="row  no-gutters">
+                    <div class="col-md-4 border bg-dark text-center ">
+                        <span class="text-light">ATAQUE BASE</span>
+                    </div> 
+                    <div class="col-2 ">
+                        <input class="number-input" type="text" value="0">
+                    </div>
+                    <div class="col-md-4 border bg-dark text-center">
+                        <span class="text-light">RESISTENCIA A CONJ.</span>
+                    </div> 
+                    <div class="col-2 ">
+                        <input class="number-input" type="text" value="0">
+                    </div>   
+                </div>
+          </div>
+
+                 <!-- MANIOBRAS DE COMBATE-->
+                 <div class="row top-buffer"></div>
+                 <div class="col-md-12">
+                      <div class="row  no-gutters">
+                          <div class="col-md-2 border bg-dark text-center ">
+                              <span class="text-light">BMC</span>
+                          </div> 
+                          <div class="col-1">
+                              <input class="number-input" type="text" value="0">
+                          </div>
+                          <div class="col-1">
+                             <input class="number-input" type="text" value="0">
+                         </div>  
+                          <div class="col-1">
+                              <input class="number-input" type="text" value="0">
+                          </div>
+                          <div class="col-1">
+                            <input class="number-input" type="text" value="0">
+                          </div>
+                        <div class="col-4">
+                            <input class="text-input" type="text" placeholder="Modificadores">
+                        </div>   
+                      </div>
+                </div>
+
+                <!-- ARMAS -->
+                <div class="row top-buffer no-gutters"></div>
+                <div class="col-md-12">
+                    <div class="row  no-gutters">
+                        <div class="col-md-6 border bg-dark text-center ">
+                            <span class="text-light">ARMA</span>
+                        </div> 
+                        <div class="col-md-4 border bg-dark text-center ">
+                            <span class="text-light">ATAQUE BASE</span>
+                        </div>
+                        <div class="col-md-2 border bg-dark text-center ">
+                            <span class="text-light">CRÍTICO</span>
+                        </div>
+                    </div>
+                    <div class="row  no-gutters">
+                        <div class="col-6">
+                            <input class="number-input" type="text">
+                          </div>
+                          <div class="col-4">
+                            <input class="number-input" type="text">
+                          </div>
+                          <div class="col-2">
+                            <input class="number-input" type="text">
+                          </div>
+                    </div>     
+                    <div class="row  no-gutters">
+                        <div class="col-md-4 border bg-dark text-center ">
+                            <span class="text-light">TIPO</span>
+                        </div> 
+                        <div class="col-md-4 border bg-dark text-center ">
+                            <span class="text-light">RANGO</span>
+                        </div>
+                        <div class="col-md-2 border bg-dark text-center ">
+                            <span class="text-light">MUNICIÓN</span>
+                        </div>
+                        <div class="col-md-2 border bg-dark text-center ">
+                            <span class="text-light">MUNICIÓN</span>
+                        </div>
+                    </div>
+                    <div class="row  no-gutters">
+                        <div class="col-4">
+                            <input class="number-input" type="text">
+                          </div>
+                          <div class="col-4">
+                            <input class="number-input" type="text">
+                          </div>
+                          <div class="col-2">
+                            <input class="number-input" type="text">
+                          </div>
+                          <div class="col-2">
+                            <input class="number-input" type="text">
+                          </div>
+                    </div>                   
+              </div>
+           </div>
+   
+                </div> 
+             
+         
+        
+   
+
+
+
+
+
+
+
+
+
+
+           <!-- <div class="col-12 col-md-6">
+                <h1 class="text-center">Habilidades </h1>
+                    <ul>
+                        <li>ACROBACIAS</li>
+                        <li>ARTESANÍA</li>
+                        <li>AVERIGUAR INTENCIONES</li>
+                        <li>CONOCIMIENTO DE CONJUROS</li>     
+                        <li>DIPLOMACIA</li>
+                        <li>DISFRAZARSE</li>
+                        <li>ENGAÑAR</li>
+                        <li>ESCAPISMO</li>
+                        <li>INTERPRETAR</li>
+                        <li>INUTILIZAR MECANISMO</li>
+                        <li>JUEGO DE MANOS</li>
+                        <li>LINGÜÍSTICA</li>
+                        <li>PERCEPCIÓN</li>
+                        <li>SABER (ARCANO)</li>
+                        <li>SABER (GEOGRAFÍA)</li>
+                        <li>SABER (HISTORIA)</li>
+                        <li>SABER (INGENIERÍA)</li>
+                        <li>SABER (LOCAL)</li>
+                        <li>SABER (MAZMORRAS)</li>
+                        <li>SABER (NATURALEZA)</li>
+                        <li>SABER (NOBLEZA)</li>
+                        <li>SABER (PLANOS)</li>
+                        <li>SABER (RELIGIÓN)</li>
+                        <li>SANAR</li>
+                        <li>SUPERVIVENCIA</li>
+                        <li>TASACIÓN</li>
+                        <li>TRATO CON ANIMALES</li>
+                        <li>TREPAR</li>
+                        <li>USAR OBJETO MÁGICO</li>
+                        <li>VOLAR</li>
+                    </ul>-->
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -657,52 +657,16 @@
             //Caracteristica Destreza
             var desCaracter = document.getElementById("desPuntoCarac");
             var desModificacion = document.getElementById("desModificador");
+            var modDesArmadura = document.getElementById("modDesArmadura");
+            var DesIniciativa= document.getElementById("modDesIniciativa");
+            var destrezaReflejos=document.getElementById("desReflejos"); 
             desCaracter.addEventListener("input", function (e) {
                 var desValue = e.target.value;
                 var statDestreza = parseInt(desValue);    
-                var modDesArmadura = document.getElementById("modDesArmadura");
-                var DesIniciativa= document.getElementById("modDesIniciativa");
-                var destrezaReflejos=document.getElementById("desReflejos");
-        
+               
+                desModificacion.value=calcularModificacion(statDestreza);
 
-                 switch(statDestreza){
-                    case 1:
-                    desModificacion.value=-5;
-                    break;
-                    case 2: case 3:
-                    desModificacion.value=-4;
-                    break;
-                    case 4: case 5:
-                    desModificacion.value=-3;
-                    break;
-                    case 6: case 7:
-                    desModificacion.value=-2;
-                    break;
-                    case 8: case 9:
-                    desModificacion.value=-1;
-                    break;
-                    case 10: case 11:
-                    desModificacion.value=0;
-                    break;
-                    case 12: case 13:
-                    desModificacion.value=1;
-                    break;
-                    case 14: case 15:
-                    desModificacion.value=2;
-                    break;
-                    case 16: case 17:
-                    desModificacion.value=3;
-                    break;
-                    case 18: case 19:
-                    desModificacion.value=4;
-                    break;
-                    case 20: case 21:
-                    desModificacion.value=5;
-                    break;
-                    case 22: case 23:
-                    desModificacion.value=6;
-                    break;
-                }        
+                
                 modDesArmadura.value=desModificacion.value; 
                 DesIniciativa.value=desModificacion.value;
                 destrezaReflejos.value=desModificacion.value;

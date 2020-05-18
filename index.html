@@ -600,6 +600,36 @@
             }
         ]
                 };
+
+        function calcularModificacion(stat) {
+            switch(stat){
+                case 1:
+                return -5;
+                case 2: case 3:
+                return -4;
+                case 4: case 5:
+                return -3;
+                case 6: case 7:
+                return -2;
+                case 8: case 9:
+                return -1;
+                case 10: case 11:
+                return 0;
+                case 12: case 13:
+                return 1;
+                case 14: case 15:
+                return 2;
+                case 16: case 17:
+                return 3;
+                case 18: case 19:
+                return 4;
+                case 20: case 21:
+                return 5;
+                case 22: case 23:
+                return 6;
+            }       
+            return stat;
+        }
         
         //event listener
         function eventlisteners(){
@@ -615,58 +645,24 @@
             var fueCaracter = document.getElementById("fuePuntoCarac");
             var fueModificacion = document.getElementById("fueModificador");
             fueCaracter.addEventListener("input", function (e) {
-            var fueValue = e.target.value;
-            var statFuerza = parseInt(fueValue);
+                var fueValue = e.target.value;
+                var statFuerza = parseInt(fueValue);
+
+                fueModificacion.value = calcularModificacion(statFuerza);
+                
             
-                switch(statFuerza){
-                    case 1:
-                    fueModificacion.value=-5;
-                    break;
-                    case 2: case 3:
-                    fueModificacion.value=-4;
-                    break;
-                    case 4: case 5:
-                    fueModificacion.value=-3;
-                    break;
-                    case 6: case 7:
-                    fueModificacion.value=-2;
-                    break;
-                    case 8: case 9:
-                    fueModificacion.value=-1;
-                    break;
-                    case 10: case 11:
-                    fueModificacion.value=0;
-                    break;
-                    case 12: case 13:
-                    fueModificacion.value=1;
-                    break;
-                    case 14: case 15:
-                    fueModificacion.value=2;
-                    break;
-                    case 16: case 17:
-                    fueModificacion.value=3;
-                    break;
-                    case 18: case 19:
-                    fueModificacion.value=4;
-                    break;
-                    case 20: case 21:
-                    fueModificacion.value=5;
-                    break;
-                    case 22: case 23:
-                    fueModificacion.value=6;
-                    break;
-                }       
+                
             }); 
 
             //Caracteristica Destreza
             var desCaracter = document.getElementById("desPuntoCarac");
             var desModificacion = document.getElementById("desModificador");
             desCaracter.addEventListener("input", function (e) {
-            var desValue = e.target.value;
-            var statDestreza = parseInt(desValue);    
-            var modDesArmadura = document.getElementById("modDesArmadura");
-            var DesIniciativa= document.getElementById("modDesIniciativa");
-            var destrezaReflejos=document.getElementById("desReflejos");
+                var desValue = e.target.value;
+                var statDestreza = parseInt(desValue);    
+                var modDesArmadura = document.getElementById("modDesArmadura");
+                var DesIniciativa= document.getElementById("modDesIniciativa");
+                var destrezaReflejos=document.getElementById("desReflejos");
         
 
                  switch(statDestreza){

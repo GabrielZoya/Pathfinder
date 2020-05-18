@@ -67,7 +67,18 @@
             <div class="offset-lg-2 col-lg-12">
                 <div class="row">
                     <div class="col-1">
-                        <input class="text-input" placeholder="Raza" id="raza" type="text">
+                        <div class="form-group">
+                            <label for="exampleSelect1">Raza</label>
+                            <select class="form-control" id="raza">
+                              <option>Dwarf</option>
+                              <option>Elf</option>
+                              <option>Gnome</option>
+                              <option>Half-Elf</option>
+                              <option>Half-Orc</option>
+                              <option>Halfling</option>
+                              <option>Human</option>
+                            </select>
+                          </div>
                     </div>
                     <div class="col-1">
                         <input class="text-input" placeholder="Deidad" id="deidad" type="text">
@@ -119,18 +130,19 @@
                             <input class="number-input" type="text">
                         </div>
                     </div>
+                    <!---------------------INICIATIVA--------------------------------------------->
                     <div class="row no-gutters">
                        <div class="col border bg-dark text-center mr-4">  
                          <span class="text-light">INICIATIVA</span> 
                        </div>
                        <div class="col-1 mr-3">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" value="0" id="totalIniciativa">
                     </div>
                     <div class="col-1 mr-2">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" value="0" id="modDesIniciativa">
                     </div>
                     <div class="col-1 mr-2">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" value="0" id="modVariosIniciativa">
                     </div>
                     </div> 
                 </div>
@@ -145,7 +157,7 @@
                         <input class="number-input" type="text" id="fuePuntoCarac" value="0">
                     </div>
                     <div class="col-1 mr-3">
-                        <input class="number-input" type="text" id="fueModificacion" value="0">
+                        <input class="number-input" type="text" id="fueModificador" value="0">
                     </div>
                     <div class="col-1 mr-2">
                         <input class="number-input" type="text" value="0">
@@ -159,10 +171,10 @@
                         <span class="text-light">DES</span>
                     </div> 
                     <div class="col-1 mr-2">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="desPuntoCarac" value="0">
                     </div>
                     <div class="col-1 mr-3">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="desModificador" value="0">
                     </div>
                     <div class="col-1 mr-2">
                         <input class="number-input" type="text" value="0">
@@ -176,10 +188,10 @@
                         <span class="text-light">CON</span>
                     </div> 
                     <div class="col-1 mr-2">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="conPuntoCarac" value="0">
                     </div>
                     <div class="col-1 mr-3">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="conModificador" value="0">
                     </div>
                     <div class="col-1 mr-2">
                         <input class="number-input" type="text" value="0">
@@ -196,7 +208,7 @@
                         <input class="number-input" type="text" id="intPuntoCarac" value="0">
                     </div>
                     <div class="col-1 mr-3">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="intModificador" value="0">
                     </div>
                     <div class="col-1 mr-2">
                         <input class="number-input" type="text" value="0">
@@ -210,10 +222,10 @@
                         <span class="text-light">SAB</span>
                     </div> 
                     <div class="col-1 mr-2">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="sabPuntoCarac" value="0">
                     </div>
                     <div class="col-1 mr-3">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="sabModificador" value="0">
                     </div>
                     <div class="col-1 mr-2">
                         <input class="number-input" type="text" value="0">
@@ -227,10 +239,10 @@
                         <span class="text-light">CAR</span>
                     </div> 
                     <div class="col-1 mr-2">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="carPuntoCarac" value="0">
                     </div>
                     <div class="col-1 mr-3">
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" id="carModificador" value="0">
                     </div>
                     <div class="col-1 mr-2">
                         <input class="number-input" type="text" value="0">
@@ -249,31 +261,31 @@
                             <span class="text-light">CA</span>
                         </div> 
                         <div class="col-md-1">
-                            <input class="number-input" placeholder="Total" type="text">
+                            <input class="number-input" placeholder="Total" type="text" id="totalArmadura">
                         </div>
                         <div class="col-md-1">
-                            <input class="number-input" type="text" value="10">
+                            <input class="number-input" type="text" value="10" id="baseArmadura">
                         </div>
                         <div class="col-md-1">
-                            <input class="number-input" type="text" >
+                            <input class="number-input" placeholder="Bonf. Arm" type="text" >
                         </div>
                         <div class="col-md-1">
-                            <input class="number-input" type="text" >
+                            <input class="number-input" placeholder="Bonf. Esc" type="text" >
                         </div>
                         <div class="col-md-1">
-                            <input class="number-input" type="text" >
+                            <input class="number-input" placeholder="Mod. Des" type="text" id="modDesArmadura">
                         </div>
                         <div class="col-md-1">
-                            <input class="number-input" type="text" >
+                            <input class="number-input" placeholder="Mod. Tam" type="text" >
                         </div>
                         <div class="col-md-1">
-                            <input class="number-input" type="text" >
+                            <input class="number-input" placeholder="Arm Nat" type="text" >
                         </div>
                         <div class="col-md-1">
-                            <input class="number-input" type="text" >
+                            <input class="number-input" placeholder="Mod. Def" type="text" >
                         </div>
                         <div class="col-md-1">
-                            <input class="number-input" type="text" >
+                            <input class="number-input" placeholder="Mod. Var" type="text" >
                         </div>
                     </div>    
                 </div> 
@@ -542,26 +554,174 @@
                 "peso":"",
                 "cabello":"",
                 "ojos":""
+            },
+            "stats":[
+            {
+                "caractFuerza":"Fuerza",
+                "puntosCaractFuerza":"",
+                "modifCaractFuerza":"",
+                "puntosTempFuerza":"",
+                "modifTempFuerza":""
+            },
+            {
+                "caractDestreza":"Destreza",
+                "puntosCaractDestreza":"",
+                "modifCaractDestreza":"",
+                "puntosTempDestreza":"",
+                "modifTempDestreza":""
+            },
+            {
+                "caractConstitución":"Constitución",
+                "puntosCaractConstitución":"",
+                "modifCaractConstitución":"",
+                "puntosTempConstitución":"",
+                "modifTempConstitución":""
+            },
+            {
+                "caractInt":"Inteligencia",
+                "puntosCaractInt":"",
+                "modifCaractInt":"",
+                "puntosTempInt":"",
+                "modifTempInt":""
+            },
+            {
+                "caractSab":"Sabiduría",
+                "puntosCaractSab":"",
+                "modifCaractSab":"",
+                "puntosTempSab":"",
+                "modifTempSab":""
+            },
+            {
+                "caractCarisma":"Carisma",
+                "puntosCaractCarisma":"",
+                "modifCaractCarisma":"",
+                "puntosTemCarisma":"",
+                "modifTempCarisma":""
             }
-        };
+        ]
+                };
         
         //event listener
         function eventlisteners(){
+            //Nombre de Personaje
             var cuadroNombre=document.getElementById("nombrePersonaje");
             cuadroNombre.addEventListener("input", function (e) {
                 var nombre = e.target.value;
                 datosJugador.nombrePersonaje = nombre;
                 console.log(datosJugador.nombrePersonaje);
             });   
-            
+
+            //Caracteristica Fuerza
             var fueCaracter = document.getElementById("fuePuntoCarac");
-            var fueModificacion = document.getElementById("fueModificacion");
+            var fueModificacion = document.getElementById("fueModificador");
             fueCaracter.addEventListener("input", function (e) {
-                var fueValue = e.target.value;
-                fueModificacion.value = fueValue;
-            });        
+            var fueValue = e.target.value;
+            var statFuerza = parseInt(fueValue);
+            
+                switch(statFuerza){
+                    case 1:
+                    fueModificacion.value=-5;
+                    break;
+                    case 2: case 3:
+                    fueModificacion.value=-4;
+                    break;
+                    case 4: case 5:
+                    fueModificacion.value=-3;
+                    break;
+                    case 6: case 7:
+                    fueModificacion.value=-2;
+                    break;
+                    case 8: case 9:
+                    fueModificacion.value=-1;
+                    break;
+                    case 10: case 11:
+                    fueModificacion.value=0;
+                    break;
+                    case 12: case 13:
+                    fueModificacion.value=1;
+                    break;
+                    case 14: case 15:
+                    fueModificacion.value=2;
+                    break;
+                    case 16: case 17:
+                    fueModificacion.value=3;
+                    break;
+                    case 18: case 19:
+                    fueModificacion.value=4;
+                    break;
+                    case 20: case 21:
+                    fueModificacion.value=5;
+                    break;
+                    case 22: case 23:
+                    fueModificacion.value=6;
+                    break;
+                }       
+            }); 
+
+            //Caracteristica Destreza
+            var desCaracter = document.getElementById("desPuntoCarac");
+            var desModificacion = document.getElementById("desModificador");
+            desCaracter.addEventListener("input", function (e) {
+            var desValue = e.target.value;
+            var statDestreza = parseInt(desValue);    
+            var modDesArmadura = document.getElementById("modDesArmadura");
+            var DesIniciativa= document.getElementById("modDesIniciativa")
+        
+
+                 switch(statDestreza){
+                    case 1:
+                    desModificacion.value=-5;
+                    break;
+                    case 2: case 3:
+                    desModificacion.value=-4;
+                    break;
+                    case 4: case 5:
+                    desModificacion.value=-3;
+                    break;
+                    case 6: case 7:
+                    desModificacion.value=-2;
+                    break;
+                    case 8: case 9:
+                    desModificacion.value=-1;
+                    break;
+                    case 10: case 11:
+                    desModificacion.value=0;
+                    break;
+                    case 12: case 13:
+                    desModificacion.value=1;
+                    break;
+                    case 14: case 15:
+                    desModificacion.value=2;
+                    break;
+                    case 16: case 17:
+                    desModificacion.value=3;
+                    break;
+                    case 18: case 19:
+                    desModificacion.value=4;
+                    break;
+                    case 20: case 21:
+                    desModificacion.value=5;
+                    break;
+                    case 22: case 23:
+                    desModificacion.value=6;
+                    break;
+                }        
+                modDesArmadura.value=desModificacion.value; 
+                DesIniciativa.value=desModificacion.value;
+        });
+
+        //ARMADURA
+       
+
+
+
         }
+
+  
         eventlisteners();
+
+        
+        
    </script>
 </body>
 

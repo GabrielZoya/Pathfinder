@@ -347,7 +347,7 @@
                         <input class="number-input" type="text" value="0">
                     </div>
                     <div class="col-1" >
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" value="0" id="desReflejos">
                     </div>
                     <div class="col-1">
                         <input class="number-input" type="text" value="0">
@@ -665,7 +665,8 @@
             var desValue = e.target.value;
             var statDestreza = parseInt(desValue);    
             var modDesArmadura = document.getElementById("modDesArmadura");
-            var DesIniciativa= document.getElementById("modDesIniciativa")
+            var DesIniciativa= document.getElementById("modDesIniciativa");
+            var destrezaReflejos=document.getElementById("desReflejos");
         
 
                  switch(statDestreza){
@@ -708,6 +709,7 @@
                 }        
                 modDesArmadura.value=desModificacion.value; 
                 DesIniciativa.value=desModificacion.value;
+                destrezaReflejos.value=desModificacion.value;
         });
 
         //ARMADURA

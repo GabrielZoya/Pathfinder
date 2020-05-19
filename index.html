@@ -338,7 +338,7 @@
                         <input class="number-input" type="text" value="0">
                     </div>
                     <div class="col-1" >
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" value="0" id="conReflejos">
                     </div>
                     <div class="col-1">
                         <input class="number-input" type="text" value="0">
@@ -384,7 +384,7 @@
                         <input class="number-input" type="text" value="0">
                     </div>
                     <div class="col-1" >
-                        <input class="number-input" type="text" value="0">
+                        <input class="number-input" type="text" value="0" id="sabReflejos">
                     </div>
                     <div class="col-1">
                         <input class="number-input" type="text" value="0">
@@ -430,7 +430,7 @@
                              <input class="number-input" type="text" value="0">
                          </div>  
                           <div class="col-1">
-                              <input class="number-input" type="text" value="0">
+                              <input class="number-input" type="text" value="0" id="modBmc">
                           </div>
                           <div class="col-1">
                             <input class="number-input" type="text" value="0">
@@ -658,11 +658,13 @@
             //Caracteristica Fuerza
             var fueCaracter = document.getElementById("fuePuntoCarac");
             var fueModificacion = document.getElementById("fueModificador");
+            var fuerzaBmc=document.getElementById("modBmc");
             fueCaracter.addEventListener("input", function (e) {
                 var fueValue = e.target.value;
                 var statFuerza = parseInt(fueValue);
 
                 fueModificacion.value = calcularModificacion(statFuerza);
+                fuerzaBmc.value=fueModificacion.value;
                 
             
                 
@@ -687,19 +689,54 @@
                 
         });
 
+          //Caracteristica Constitucion
+            var conCaracter = document.getElementById("conPuntoCarac");
+            var conModificacion = document.getElementById("conModificador");
+            var constitucionReflejos=document.getElementById("conReflejos");
+            conCaracter.addEventListener("input", function (e) {
+                var conValue = e.target.value;
+                var statConstitucion = parseInt(conValue);
+
+                conModificacion.value = calcularModificacion(statConstitucion);
+                constitucionReflejos.value =  conModificacion.value;
+
+            });     
+
           //Caracteristica Inteligencia
-          var intCaracter = document.getElementById("intPuntoCarac");
+            var intCaracter = document.getElementById("intPuntoCarac");
             var intModificacion = document.getElementById("intModificador");
             intCaracter.addEventListener("input", function (e) {
                 var intValue = e.target.value;
                 var statInteligencia = parseInt(intValue);
 
                 intModificacion.value = calcularModificacion(statInteligencia);
-                
-            
-                
+                  
             }); 
-       
+           
+           //Caracteristica Sabiduria
+            var sabCaracter = document.getElementById("sabPuntoCarac");
+            var sabModificacion = document.getElementById("sabModificador");
+            var sabiduriaReflejos=document.getElementById("sabReflejos");
+            sabCaracter.addEventListener("input", function (e) {
+                var sabValue = e.target.value;
+                var statSabiduria = parseInt(sabValue);
+
+                sabModificacion.value = calcularModificacion(statSabiduria);
+                sabiduriaReflejos.value=sabModificacion.value;
+                  
+            }); 
+
+
+               //Caracteristica Carisma
+            var carCaracter = document.getElementById("carPuntoCarac");
+            var carModificacion = document.getElementById("carModificador");
+            carCaracter.addEventListener("input", function (e) {
+                var carValue = e.target.value;
+                var statCarisma = parseInt(carValue);
+
+                carModificacion.value = calcularModificacion(statCarisma);
+                  
+            }); 
 
 
 

@@ -647,6 +647,20 @@
         
         //event listener
         function eventlisteners(){
+
+            //totales
+            addEventListener("input", function (e){
+                //TOTAL INICIATIVA
+                var totIni = document.getElementById("totalIniciativa");
+                var modVarIni =document.getElementById("modVariosIniciativa"); 
+                
+                totIni.value = parseInt(DesIniciativa.value) + parseInt(modVarIni.value);
+
+                
+
+            });
+
+
             //Nombre de Personaje
             var cuadroNombre=document.getElementById("nombrePersonaje");
             cuadroNombre.addEventListener("input", function (e) {

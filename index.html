@@ -188,10 +188,11 @@
         </div>
       </div>
     </div>
+    
+    <!-- STATS-->
     <div class="row">
-      <div class="col-12 col-md-8">
-        <div class="row">
-          <!-- STATS-->
+      <div class="col-12 col-md-8">       
+          <div class="row">
           <div class="col-md-6">
             <div class="row no-gutters">
               <div class="col border bg-dark text-center mr-4">
@@ -410,8 +411,26 @@
           </div>
         </div>
 
-        <!-- CLASE DE ARMADURA-->
+<!-- DESCRIPCION COLUMNAS ARMADURA        --> 
         <div class="row top-buffer no-gutters">
+          <div class="col-12">
+            <div class="row">
+              <div class="col text-center"> CLASE ARMADURA </div> 
+              <div class="col text-center"> TOTAL</div>
+              <div class="col text-center"> BASE ARMADURA </div>
+              <div class="col text-center"> BONF. ARMADURA</div>
+              <div class="col text-center"> BONF. ESCUDO</div>
+              <div class="col text-center"> MODIF. DESTREZA</div>
+              <div class="col text-center"> MODIF. TAMAÑO</div>
+              <div class="col text-center"> ARMADURA NATURAL</div>
+              <div class="col text-center"> MODIF. DEFLECCION</div>
+              <div class="col text-center"> MODIF. VARIOS</div>              
+            </div>
+          </div>
+        </div>  
+
+        <!-- CLASE DE ARMADURA-->
+        <div class="row no-gutters">
           <div class="col-12">
             <div class="row">
               <div class="col border bg-dark text-center">
@@ -526,27 +545,27 @@
               <span class="text-light">FORTALEZA</span>
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="totalSalFortaleza"/>
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="salvacionFortalezaBase"/>
             </div>
             <div class="col-1">
               <input
                 class="number-input"
                 type="text"
                 value="0"
-                id="conReflejos"
+                id="modFortaleza"
               />
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modMagicoFortaleza"/>
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modVariosFortaleza"/>
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modTemporalFortaleza" />
             </div>
           </div>
           <div class="row no-gutters">
@@ -554,10 +573,10 @@
               <span class="text-light">REFLEJOS</span>
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="totalSalReflejos" />
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="salvacionReflejosBase" />
             </div>
             <div class="col-1">
               <input
@@ -568,13 +587,13 @@
               />
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modMagicoReflejos" />
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modVariosReflejos"/>
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modTemporalReflejos"/>
             </div>
           </div>
           <div class="row no-gutters">
@@ -582,27 +601,27 @@
               <span class="text-light">VOLUNTAD</span>
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="totalSalVoluntad" />
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="salvacionVoluntadBase" />
             </div>
             <div class="col-1">
               <input
                 class="number-input"
                 type="text"
                 value="0"
-                id="sabReflejos"
+                id="sabVoluntad"
               />
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modMagicoVoluntad" />
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modVariosVoluntad"/>
             </div>
             <div class="col-1">
-              <input class="number-input" type="text" value="0" />
+              <input class="number-input" type="text" value="0" id="modTemporalVoluntad"/>
             </div>
           </div>
 
@@ -633,16 +652,16 @@
                 <span class="text-light">BMC</span>
               </div>
               <div class="col-1">
-                <input class="number-input" type="text" value="0" />
+                <input class="number-input" type="text" value="0" id="totalBmc" />
               </div>
               <div class="col-1">
-                <input class="number-input" type="text" value="0" />
+                <input class="number-input" type="text" value="0" id="ataqueBaseBmc"/>
               </div>
               <div class="col-1">
                 <input class="number-input" type="text" value="0" id="modBmc" />
               </div>
               <div class="col-1">
-                <input class="number-input" type="text" value="0" />
+                <input class="number-input" type="text" value="0" id="modifTamañoBmc"/>
               </div>
               <div class="col-4">
                 <input
@@ -829,7 +848,6 @@
           //TOTAL INICIATIVA
           var totIni = document.getElementById("totalIniciativa");
           var modVarIni = document.getElementById("modVariosIniciativa");
-        console.log("pepito");
           totIni.value =
             parseInt(DesIniciativa.value) + parseInt(modVarIni.value);
 
@@ -847,10 +865,74 @@
             parseInt(baseArmor.value) +
             parseInt(bonifArmor.value) +
             parseInt(bonifEscudo.value) +
+            parseInt(modDesArmor.value) +
             parseInt(bonifTamaño.value) +
             parseInt(natArmor.value) +
             parseInt(modDefle.value) +
             parseInt(modVarVarios.value);
+
+           //TOTAL MANIOBRAS DE COMBATE 
+           var totBmc=document.getElementById("totalBmc");
+           var attackBaseBmc=document.getElementById("ataqueBaseBmc");
+           var modifBmc=document.getElementById("modBmc");
+           var modifTamBmc=document.getElementById("modifTamañoBmc");
+                
+           totBmc.value =
+            parseInt(ataqueBaseBmc.value) +
+            parseInt(modBmc.value) +
+            parseInt(modifTamañoBmc.value); 
+
+
+          //              TOTAL TIRADAS DE SALVACION
+          //FORTALEZA
+          var totSalFort=document.getElementById("totalSalFortaleza"); 
+          var salvFortBase=document.getElementById("salvacionFortalezaBase");  
+          var modMagicoFort=document.getElementById("modMagicoFortaleza"); 
+          var modVarFort=document.getElementById("modVariosFortaleza"); 
+          var modTempFort=document.getElementById("modTemporalFortaleza"); 
+
+          totSalFort.value =
+            parseInt(salvFortBase.value) +
+            parseInt(modMagicoFort.value) +
+            parseInt(modVarFort.value) +
+            parseInt(modTempFort.value) +
+            parseInt(modFortaleza.value);
+
+          //REFLEJOS
+          var totSalRefle=document.getElementById("totalSalReflejos"); 
+          var salvRefleBase=document.getElementById("salvacionReflejosBase");  
+          var modMagicoRefle=document.getElementById("modMagicoReflejos"); 
+          var modVarRefle=document.getElementById("modVariosReflejos"); 
+          var modTempRefle=document.getElementById("modTemporalReflejos"); 
+
+          totSalRefle.value =
+            parseInt(salvRefleBase.value) +
+            parseInt(modMagicoRefle.value) +
+            parseInt(modVarRefle.value) +
+            parseInt(modTempRefle.value) + 
+            parseInt(destrezaReflejos.value);
+
+          //VOLUNTAD
+          var totSalVoluntad=document.getElementById("totalSalVoluntad"); 
+          var salvVoluntadBase=document.getElementById("salvacionVoluntadBase");  
+          var modMagicoVoluntad=document.getElementById("modMagicoVoluntad"); 
+          var modVarVoluntad=document.getElementById("modVariosVoluntad"); 
+          var modTempVoluntad=document.getElementById("modTemporalVoluntad"); 
+
+          totSalVoluntad.value =
+            parseInt(salvVoluntadBase.value) +
+            parseInt(modMagicoVoluntad.value) +
+            parseInt(modVarVoluntad.value) +
+            parseInt(modTempVoluntad.value) + 
+            parseInt(modVoluntad.value);  
+
+
+           //PRUEBA DE CLASE
+           var razaPj = document.getElementById("raza");
+           if (razaPj.value == "Human"){
+             console.log("sos un humano");
+           }
+
         });
 
         //Nombre de Personaje
@@ -876,7 +958,7 @@
         //Caracteristica Destreza
         var desCaracter = document.getElementById("desPuntoCarac");
         var desModificacion = document.getElementById("desModificador");
-        var modDesArmadura = document.getElementById("modDesArmadura");
+        var modDesArmor = document.getElementById("modDesArmadura");
         var DesIniciativa = document.getElementById("modDesIniciativa");
         var destrezaReflejos = document.getElementById("desReflejos");
         desCaracter.addEventListener("input", function (e) {
@@ -885,7 +967,7 @@
 
           desModificacion.value = calcularModificacion(statDestreza);
 
-          modDesArmadura.value = desModificacion.value;
+          modDesArmor.value = desModificacion.value;
           DesIniciativa.value = desModificacion.value;
           destrezaReflejos.value = desModificacion.value;
         });
@@ -893,13 +975,13 @@
         //Caracteristica Constitucion
         var conCaracter = document.getElementById("conPuntoCarac");
         var conModificacion = document.getElementById("conModificador");
-        var constitucionReflejos = document.getElementById("conReflejos");
+        var constitucionFortaleza = document.getElementById("modFortaleza");
         conCaracter.addEventListener("input", function (e) {
           var conValue = e.target.value;
           var statConstitucion = parseInt(conValue);
 
           conModificacion.value = calcularModificacion(statConstitucion);
-          constitucionReflejos.value = conModificacion.value;
+          constitucionFortaleza.value = conModificacion.value;
         });
 
         //Caracteristica Inteligencia
@@ -915,13 +997,13 @@
         //Caracteristica Sabiduria
         var sabCaracter = document.getElementById("sabPuntoCarac");
         var sabModificacion = document.getElementById("sabModificador");
-        var sabiduriaReflejos = document.getElementById("sabReflejos");
+        var modVoluntad = document.getElementById("sabVoluntad");
         sabCaracter.addEventListener("input", function (e) {
           var sabValue = e.target.value;
           var statSabiduria = parseInt(sabValue);
 
           sabModificacion.value = calcularModificacion(statSabiduria);
-          sabiduriaReflejos.value = sabModificacion.value;
+          modVoluntad.value = sabModificacion.value;
         });
 
         //Caracteristica Carisma
@@ -936,8 +1018,6 @@
       }
 
       eventlisteners();
-
-  
     </script>
   </body>
 </html>

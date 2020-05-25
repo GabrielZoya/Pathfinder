@@ -47,7 +47,6 @@
             <div class="col-5">
               <input
                 class="text-input"
-                placeholder="Nombre del Personaje"
                 id="nombrePersonaje"
                 type="text"
               />
@@ -55,7 +54,6 @@
             <div class="col-3">
               <input
                 class="text-input"
-                placeholder="Alineamiento"
                 id="alineamiento"
                 type="text"
               />
@@ -63,7 +61,6 @@
             <div class="col-4">
               <input
                 class="text-input"
-                placeholder="Nombre del Jugador "
                 id="nombreJugador"
                 type="text"
               />
@@ -84,7 +81,6 @@
             <div class="col-2">
               <input
                 class="text-input"
-                placeholder="Nivel"
                 id="nivel"
                 type="text"
               />
@@ -92,7 +88,6 @@
             <div class="col-5">
               <input
                 class="text-input"
-                placeholder="Nombre Campaña"
                 id="nombreCampaña"
                 type="text"
               />
@@ -100,16 +95,45 @@
             <div class="col-5">
               <input
                 class="text-input"
-                placeholder="Hogar"
                 id="hogar"
                 type="text"
               />
             </div>
           </div>
+
           <div class="row mt-3">
             <div class="col">
+           Raza
+            </div>
+            <div class="col">
+              Deidad
+            </div>
+            <div class="col">
+             Tamaño
+            </div>
+            <div class="col">
+             Sexo
+            </div>
+            <div class="col">
+              Edad
+            </div>
+            <div class="col">
+              Altura
+            </div>
+            <div class="col">
+             Peso
+            </div>
+            <div class="col">
+              Cabello
+            </div>
+            <div class="col">
+             Ojos
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
               <div class="form-group">
-                <label for="exampleSelect1">Raza</label>
                 <select class="form-control" id="raza">
                   <option>Dwarf</option>
                   <option>Elf</option>
@@ -124,7 +148,6 @@
             <div class="col">
               <input
                 class="text-input"
-                placeholder="Deidad"
                 id="deidad"
                 type="text"
               />
@@ -132,7 +155,6 @@
             <div class="col">
               <input
                 class="text-input"
-                placeholder="Tamaño"
                 id="tamaño"
                 type="text"
               />
@@ -140,7 +162,6 @@
             <div class="col">
               <input
                 class="text-input"
-                placeholder="Sexo"
                 id="sexo"
                 type="text"
               />
@@ -148,7 +169,6 @@
             <div class="col">
               <input
                 class="text-input"
-                placeholder="Edad"
                 id="edad"
                 type="text"
               />
@@ -156,7 +176,6 @@
             <div class="col">
               <input
                 class="text-input"
-                placeholder="Altura"
                 id="altura"
                 type="text"
               />
@@ -164,7 +183,6 @@
             <div class="col">
               <input
                 class="text-input"
-                placeholder="Peso"
                 id="peso"
                 type="text"
               />
@@ -172,7 +190,6 @@
             <div class="col">
               <input
                 class="text-input"
-                placeholder="Cabello"
                 id="cabello"
                 type="text"
               />
@@ -180,7 +197,6 @@
             <div class="col">
               <input
                 class="text-input"
-                placeholder="Ojos"
                 id="ojos"
                 type="text"
               />
@@ -835,9 +851,31 @@ y permanece inconsciente.">
           </div>
 
           <!-- MANIOBRAS DE COMBATE-->
-          <div class="row top-buffer"></div>
+         
           <div class="col-md-12">
-            <div class="row no-gutters">
+
+            <div class="row no-gutters top-buffer">
+              <div class="col-md-2 text-center">
+                BONO MANIOBRAS DE COMBATE
+              </div>
+              <div class="col-1 text-center">
+                TOTAL
+              </div>
+              <div class="col-1 text-center">
+                ATAQUE BASE
+              </div>
+              <div class="col-1 text-center">
+                MODIF. FUERZA
+              </div>
+              <div class="col-1 text-center">
+                MODIF. TAMAÑO
+              </div>
+              <div class="col-4 text-center">
+                MODIFICADORES
+              </div>
+            </div>
+
+            <div class="row no-gutters ">
               <div class="col-md-2 border bg-dark text-center">
                 <span class="text-light">BMC</span>
               </div>
@@ -848,7 +886,7 @@ y permanece inconsciente.">
                   value="0"
                   id="totalBmc"
                 />
-              </div>
+              </div> =
               <div class="col-1">
                 <input
                   class="number-input"
@@ -856,10 +894,10 @@ y permanece inconsciente.">
                   value="0"
                   id="ataqueBaseBmc"
                 />
-              </div>
+              </div> +
               <div class="col-1">
                 <input class="number-input" type="text" value="0" id="modBmc" />
-              </div>
+              </div> +
               <div class="col-1">
                 <input
                   class="number-input"

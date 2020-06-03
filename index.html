@@ -451,11 +451,11 @@ y permanece inconsciente.">
           <!-- VIDA E INICIATIVA -->
           <div class="col-6">
             <div class="row no-gutters">
-              <div class="col border bg-dark text-center mr-4">
+              <div class="col border bg-dark text-center mr-4 ">
                 <span class="text-light">PG</span>
               </div>
               <div class="col-1 mr-2">
-                <input class="number-input" type="text" />
+                <input class="number-input" type="text"  />
               </div>
               <div class="col-1 mr-2">
                 <input class="number-input" type="text" />
@@ -832,23 +832,64 @@ y permanece inconsciente.">
           </div>
 
           <!-- ATAQUE BASE-->
-          <div class="row top-buffer"></div>
-          <div class="col-md-12">
-            <div class="row no-gutters">
-              <div class="col-md-4 border bg-dark text-center">
-                <span class="text-light">ATAQUE BASE</span>
-              </div>
-              <div class="col-2">
-                <input class="number-input" type="text" value="0" />
-              </div>
-              <div class="col-md-4 border bg-dark text-center">
-                <span class="text-light">RESISTENCIA A CONJUROS</span>
-              </div>
-              <div class="col-2">
-                <input class="number-input" type="text" value="0" />
+          <div class="row top-buffer">
+            <div class="row">
+              
+                <div class="row no-gutters">
+                  <div class="col-5 text-center">
+                   
+                  </div>
+                  <div class="col text-center">
+                    1ER ATAQUE
+                  </div>
+                  <div class="col text-center">
+                    2DO ATAQUE
+                  </div>
+                  <div class="col text-center">
+                    3ER ATAQUE
+                  </div>
+                  <div class="col text-center">
+                    4TO ATAQUE
+                  </div>
+                  <div class="col text-center">
+                  
+                  </div>
+                  <div class="col">
+                    <input class="number-input" type="text" value="0" />
+                  </div>
+                </div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row no-gutters">
+                  <div class="col-md-4 border bg-dark text-center">
+                    <span class="text-light">ATAQUE BASE</span>
+                  </div>
+                  <div class="col">
+                    <input class="number-input" type="text" value="0" id="primerAtaque"/>
+                  </div>
+                  <div class="col">
+                    <input class="number-input" type="text" value="0" id="segundoAtaque" />
+                  </div>
+                  <div class="col">
+                    <input class="number-input" type="text" value="0" id="tercerAtaque" />
+                  </div>
+                  <div class="col">
+                    <input class="number-input" type="text" value="0" id="cuartoAtaque"/>
+                  </div>
+                  <div class="col-md-4 border bg-dark text-center">
+                    <span class="text-light">RESISTENCIA A CONJUROS</span>
+                  </div>
+                  <div class="col-2">
+                    <input class="number-input" type="text" value="0" />
+                  </div>
+                </div>
               </div>
             </div>
+        
           </div>
+        
 
           <!-- MANIOBRAS DE COMBATE-->
          
@@ -1777,70 +1818,91 @@ y permanece inconsciente.">
       </div>
     </div>
 
-    <script type="text/javascript" src="warrior.json"></script>
     <script>
-      var datosJugador = {
-        datosPersonaje: {
-          nombrePersonaje: "",
-          nombreJugador: "",
-          nivel: 1,
-          nombreCampaña: "",
-          hogar: "",
-          raza: "",
-          deidad: "",
-          tamaño: "",
-          sexo: "",
-          edad: "",
-          altura: "",
-          peso: "",
-          cabello: "",
-          ojos: "",
-        },
-        stats: [
-          {
-            caractFuerza: "Fuerza",
-            puntosCaractFuerza: "",
-            modifCaractFuerza: "",
-            puntosTempFuerza: "",
-            modifTempFuerza: "",
-          },
-          {
-            caractDestreza: "Destreza",
-            puntosCaractDestreza: "",
-            modifCaractDestreza: "",
-            puntosTempDestreza: "",
-            modifTempDestreza: "",
-          },
-          {
-            caractConstitución: "Constitución",
-            puntosCaractConstitución: "",
-            modifCaractConstitución: "",
-            puntosTempConstitución: "",
-            modifTempConstitución: "",
-          },
-          {
-            caractInt: "Inteligencia",
-            puntosCaractInt: "",
-            modifCaractInt: "",
-            puntosTempInt: "",
-            modifTempInt: "",
-          },
-          {
-            caractSab: "Sabiduría",
-            puntosCaractSab: "",
-            modifCaractSab: "",
-            puntosTempSab: "",
-            modifTempSab: "",
-          },
-          {
-            caractCarisma: "Carisma",
-            puntosCaractCarisma: "",
-            modifCaractCarisma: "",
-            puntosTemCarisma: "",
-            modifTempCarisma: "",
-          },
-        ],
-      };
+    
+    //variables
+      
+      //Caracteristica Fuerza
+      var fueCaracter = document.getElementById("fuePuntoCarac");
+      var fueModificacion = document.getElementById("fueModificador");
+      var fuerzaBmc = document.getElementById("modBmc");
+
+      //Caracteristica Destreza
+      var desCaracter = document.getElementById("desPuntoCarac");
+      var desModificacion = document.getElementById("desModificador");
+      var modDesArmor = document.getElementById("modDesArmadura");
+      var DesIniciativa = document.getElementById("modDesIniciativa");
+      var destrezaReflejos = document.getElementById("desReflejos"); 
+
+      //Caracteristica Constitucion
+      var conCaracter = document.getElementById("conPuntoCarac");
+      var conModificacion = document.getElementById("conModificador");
+      var constitucionFortaleza = document.getElementById("modFortaleza");
+
+      //Caracteristica Inteligencia
+      var intCaracter = document.getElementById("intPuntoCarac");
+      var intModificacion = document.getElementById("intModificador");
+
+      //Caracteristica Sabiduria
+      var sabCaracter = document.getElementById("sabPuntoCarac");
+      var sabModificacion = document.getElementById("sabModificador");
+      var modVoluntad = document.getElementById("sabVoluntad");
+
+      //Caracteristica Carisma
+      var carCaracter = document.getElementById("carPuntoCarac");
+      var carModificacion = document.getElementById("carModificador");
+
+
+     //TOTAL INICIATIVA
+      var totIni = document.getElementById("totalIniciativa");
+      var modVarIni = document.getElementById("modVariosIniciativa");
+         
+      //TOTAL ARMADURA
+      var totArmor = document.getElementById("totalArmadura");
+      var baseArmor = document.getElementById("baseArmadura");
+      var bonifArmor = document.getElementById("bonificadorArmadura");
+      var bonifEscudo = document.getElementById("bonificadorEscudo");
+      var bonifTamaño = document.getElementById("modificadorTamaño");
+      var natArmor = document.getElementById("armaduraNatural");
+      var modDefle = document.getElementById("modifDefleccion");
+      var modVarVarios = document.getElementById("armorModifVarios");
+
+      //TOTAL MANIOBRAS DE COMBATE
+      var totBmc = document.getElementById("totalBmc");
+      var attackBaseBmc = document.getElementById("ataqueBaseBmc");
+      var modifBmc = document.getElementById("modBmc");
+      var modifTamBmc = document.getElementById("modifTamañoBmc");
+
+      //              TOTAL TIRADAS DE SALVACION
+      //FORTALEZA
+      var totSalFort = document.getElementById("totalSalFortaleza");
+      var salvFortBase = document.getElementById("salvacionFortalezaBase");
+      var modMagicoFort = document.getElementById("modMagicoFortaleza");
+      var modVarFort = document.getElementById("modVariosFortaleza");
+      var modTempFort = document.getElementById("modTemporalFortaleza");
+
+      //REFLEJOS
+      var totSalRefle = document.getElementById("totalSalReflejos");
+      var salvRefleBase = document.getElementById("salvacionReflejosBase");
+      var modMagicoRefle = document.getElementById("modMagicoReflejos");
+      var modVarRefle = document.getElementById("modVariosReflejos");
+      var modTempRefle = document.getElementById("modTemporalReflejos");
+
+      //VOLUNTAD
+      var totSalVoluntad = document.getElementById("totalSalVoluntad");
+      var salvVoluntadBase = document.getElementById("salvacionVoluntadBase");
+      var modMagicoVoluntad = document.getElementById("modMagicoVoluntad");
+      var modVarVoluntad = document.getElementById("modVariosVoluntad");
+      var modTempVoluntad = document.getElementById("modTemporalVoluntad");
+
+       //ATAQUE BASE
+      var ataqueUno=document.getElementById("primerAtaque");
+      var ataqueDos=document.getElementById("segundoAtaque");
+      var ataqueTres=document.getElementById("tercerAtaque");
+      var ataqueCuatro=document.getElementById("cuartoAtaque");
+
+      
+
 
       function calcularModificacion(stat) {
         return Math.floor(stat / 2) - 5;
@@ -1852,26 +1914,21 @@ y permanece inconsciente.">
       console.log("TEST 3", calcularModificacion(3) === -4);
       console.log("TEST 4", calcularModificacion(4) === -3);
       */
-
+      
       //event listener
+      eventlisteners();
+      
       function eventlisteners() {
         //totales
         addEventListener("input", function (e) {
+         
           //TOTAL INICIATIVA
-          var totIni = document.getElementById("totalIniciativa");
-          var modVarIni = document.getElementById("modVariosIniciativa");
           totIni.value =
             parseInt(DesIniciativa.value) + parseInt(modVarIni.value);
 
           //TOTAL ARMADURA
-          var totArmor = document.getElementById("totalArmadura");
-          var baseArmor = document.getElementById("baseArmadura");
-          var bonifArmor = document.getElementById("bonificadorArmadura");
-          var bonifEscudo = document.getElementById("bonificadorEscudo");
-          var bonifTamaño = document.getElementById("modificadorTamaño");
-          var natArmor = document.getElementById("armaduraNatural");
-          var modDefle = document.getElementById("modifDefleccion");
-          var modVarVarios = document.getElementById("armorModifVarios");
+          baseArmor.value=10;
+          baseArmor.disabled=true;
 
           totArmor.value =
             parseInt(baseArmor.value) +
@@ -1884,11 +1941,6 @@ y permanece inconsciente.">
             parseInt(modVarVarios.value);
 
           //TOTAL MANIOBRAS DE COMBATE
-          var totBmc = document.getElementById("totalBmc");
-          var attackBaseBmc = document.getElementById("ataqueBaseBmc");
-          var modifBmc = document.getElementById("modBmc");
-          var modifTamBmc = document.getElementById("modifTamañoBmc");
-
           totBmc.value =
             parseInt(ataqueBaseBmc.value) +
             parseInt(modBmc.value) +
@@ -1896,12 +1948,7 @@ y permanece inconsciente.">
 
           //              TOTAL TIRADAS DE SALVACION
           //FORTALEZA
-          var totSalFort = document.getElementById("totalSalFortaleza");
-          var salvFortBase = document.getElementById("salvacionFortalezaBase");
-          var modMagicoFort = document.getElementById("modMagicoFortaleza");
-          var modVarFort = document.getElementById("modVariosFortaleza");
-          var modTempFort = document.getElementById("modTemporalFortaleza");
-
+         
           totSalFort.value =
             parseInt(salvFortBase.value) +
             parseInt(modMagicoFort.value) +
@@ -1910,12 +1957,7 @@ y permanece inconsciente.">
             parseInt(modFortaleza.value);
 
           //REFLEJOS
-          var totSalRefle = document.getElementById("totalSalReflejos");
-          var salvRefleBase = document.getElementById("salvacionReflejosBase");
-          var modMagicoRefle = document.getElementById("modMagicoReflejos");
-          var modVarRefle = document.getElementById("modVariosReflejos");
-          var modTempRefle = document.getElementById("modTemporalReflejos");
-
+         
           totSalRefle.value =
             parseInt(salvRefleBase.value) +
             parseInt(modMagicoRefle.value) +
@@ -1924,14 +1966,7 @@ y permanece inconsciente.">
             parseInt(destrezaReflejos.value);
 
           //VOLUNTAD
-          var totSalVoluntad = document.getElementById("totalSalVoluntad");
-          var salvVoluntadBase = document.getElementById(
-            "salvacionVoluntadBase"
-          );
-          var modMagicoVoluntad = document.getElementById("modMagicoVoluntad");
-          var modVarVoluntad = document.getElementById("modVariosVoluntad");
-          var modTempVoluntad = document.getElementById("modTemporalVoluntad");
-
+         
           totSalVoluntad.value =
             parseInt(salvVoluntadBase.value) +
             parseInt(modMagicoVoluntad.value) +
@@ -1955,9 +1990,6 @@ y permanece inconsciente.">
         });
 
         //Caracteristica Fuerza
-        var fueCaracter = document.getElementById("fuePuntoCarac");
-        var fueModificacion = document.getElementById("fueModificador");
-        var fuerzaBmc = document.getElementById("modBmc");
         fueCaracter.addEventListener("input", function (e) {
           var fueValue = e.target.value;
           var statFuerza = parseInt(fueValue);
@@ -1967,11 +1999,6 @@ y permanece inconsciente.">
         });
 
         //Caracteristica Destreza
-        var desCaracter = document.getElementById("desPuntoCarac");
-        var desModificacion = document.getElementById("desModificador");
-        var modDesArmor = document.getElementById("modDesArmadura");
-        var DesIniciativa = document.getElementById("modDesIniciativa");
-        var destrezaReflejos = document.getElementById("desReflejos");
         desCaracter.addEventListener("input", function (e) {
           var desValue = e.target.value;
           var statDestreza = parseInt(desValue);
@@ -1984,9 +2011,6 @@ y permanece inconsciente.">
         });
 
         //Caracteristica Constitucion
-        var conCaracter = document.getElementById("conPuntoCarac");
-        var conModificacion = document.getElementById("conModificador");
-        var constitucionFortaleza = document.getElementById("modFortaleza");
         conCaracter.addEventListener("input", function (e) {
           var conValue = e.target.value;
           var statConstitucion = parseInt(conValue);
@@ -1996,8 +2020,6 @@ y permanece inconsciente.">
         });
 
         //Caracteristica Inteligencia
-        var intCaracter = document.getElementById("intPuntoCarac");
-        var intModificacion = document.getElementById("intModificador");
         intCaracter.addEventListener("input", function (e) {
           var intValue = e.target.value;
           var statInteligencia = parseInt(intValue);
@@ -2006,9 +2028,6 @@ y permanece inconsciente.">
         });
 
         //Caracteristica Sabiduria
-        var sabCaracter = document.getElementById("sabPuntoCarac");
-        var sabModificacion = document.getElementById("sabModificador");
-        var modVoluntad = document.getElementById("sabVoluntad");
         sabCaracter.addEventListener("input", function (e) {
           var sabValue = e.target.value;
           var statSabiduria = parseInt(sabValue);
@@ -2018,17 +2037,23 @@ y permanece inconsciente.">
         });
 
         //Caracteristica Carisma
-        var carCaracter = document.getElementById("carPuntoCarac");
-        var carModificacion = document.getElementById("carModificador");
         carCaracter.addEventListener("input", function (e) {
           var carValue = e.target.value;
           var statCarisma = parseInt(carValue);
 
           carModificacion.value = calcularModificacion(statCarisma);
         });
+
+        //ATAQUE BASE
+        ataqueDos.disabled=true;
+        ataqueTres.disabled=true;
+        ataqueCuatro.disabled=true;
+
       }
       
-      eventlisteners();
+     
+
+
     </script>
   </body>
 </html>

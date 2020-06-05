@@ -22,189 +22,206 @@
       .top-buffer {
         margin-top: 20px;
       }
+
+      .fit-image{
+        width: 100%;
+        object-fit: cover;
+        /*height: 300px; /* only if you want fixed height */
+        }
     </style>
   </head>
 
   <body class="p-2">
-    <div class="container">
-      <div class="row mb-2">
-        <div class="col-4">
-          <img src="logo.jpg" class="img-fluid" />
+    <div class="row">
+      <!-- columna 1-->
+      <div class="col-3">
+        <img src="logo.jpg" class="img-responsive fit-image" />
+      </div>
+      <!-- columna 2-->
+      <div class="col-6">
+        <div class="row">
+          <div class="col-5">
+            Nombre del Personaje
+          </div>
+          <div class="col-3">
+            Alineamiento
+          </div>
+          <div class="col-4">
+            Nombre del Jugador
+          </div>
         </div>
-        <div class="col-8">
-          <div class="row">
-            <div class="col-5">
-              Nombre del Personaje
-            </div>
-            <div class="col-3">
-              Alineamiento
-            </div>
-            <div class="col-4">
-              Nombre del Jugador
-            </div>
+        <div class="row">
+          <div class="col-5">
+            <input
+              class="text-input"
+              id="nombrePersonaje"
+              type="text"
+            />
           </div>
-          <div class="row">
-            <div class="col-5">
-              <input
-                class="text-input"
-                id="nombrePersonaje"
-                type="text"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                class="text-input"
-                id="alineamiento"
-                type="text"
-              />
-            </div>
-            <div class="col-4">
-              <input
-                class="text-input"
-                id="nombreJugador"
-                type="text"
-              />
-            </div>
+          <div class="col-3">
+            <input
+              class="text-input"
+              id="alineamiento"
+              type="text"
+            />
           </div>
-          <div class="row mt-3">
-            <div class="col-2">
-              Nivel"
-            </div>
-            <div class="col-5">
-              Nombre Campaña
-            </div>
-            <div class="col-5">
-              Hogar
-            </div>
+          <div class="col-4">
+            <input
+              class="text-input"
+              id="nombreJugador"
+              type="text"
+            />
           </div>
-          <div class="row">
-            <div class="col-2">
-              <input
-                class="text-input"
-                id="nivel"
-                type="text"
-              />
-            </div>
-            <div class="col-5">
-              <input
-                class="text-input"
-                id="nombreCampaña"
-                type="text"
-              />
-            </div>
-            <div class="col-5">
-              <input
-                class="text-input"
-                id="hogar"
-                type="text"
-              />
-            </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-2">
+            Nivel"
           </div>
+          <div class="col-5">
+            Nombre Campaña
+          </div>
+          <div class="col-5">
+            Hogar
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input
+              class="text-input"
+              id="nivel"
+              type="text"
+            />
+          </div>
+          <div class="col-5">
+            <input
+              class="text-input"
+              id="nombreCampaña"
+              type="text"
+            />
+          </div>
+          <div class="col-5">
+            <input
+              class="text-input"
+              id="hogar"
+              type="text"
+            />
+          </div>
+        </div>
 
-          <div class="row mt-3">
-            <div class="col">
-           Raza
-            </div>
-            <div class="col">
-              Deidad
-            </div>
-            <div class="col">
-             Tamaño
-            </div>
-            <div class="col">
-             Sexo
-            </div>
-            <div class="col">
-              Edad
-            </div>
-            <div class="col">
-              Altura
-            </div>
-            <div class="col">
-             Peso
-            </div>
-            <div class="col">
-              Cabello
-            </div>
-            <div class="col">
-             Ojos
+        <div class="row mt-3">
+          <div class="col">
+         Raza
+          </div>
+          <div class="col">
+            Deidad
+          </div>
+          <div class="col">
+           Tamaño
+          </div>
+          <div class="col">
+           Sexo
+          </div>
+          <div class="col">
+            Edad
+          </div>
+          <div class="col">
+            Altura
+          </div>
+          <div class="col">
+           Peso
+          </div>
+          <div class="col">
+            Cabello
+          </div>
+          <div class="col">
+           Ojos
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <select class="form-control" id="raza">
+                <option>Dwarf</option>
+                <option>Elf</option>
+                <option>Gnome</option>
+                <option>Half-Elf</option>
+                <option>Half-Orc</option>
+                <option>Halfling</option>
+                <option>Human</option>
+              </select>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col">
-              <div class="form-group">
-                <select class="form-control" id="raza">
-                  <option>Dwarf</option>
-                  <option>Elf</option>
-                  <option>Gnome</option>
-                  <option>Half-Elf</option>
-                  <option>Half-Orc</option>
-                  <option>Halfling</option>
-                  <option>Human</option>
-                </select>
-              </div>
-            </div>
-            <div class="col">
-              <input
-                class="text-input"
-                id="deidad"
-                type="text"
-              />
-            </div>
-            <div class="col">
-              <input
-                class="text-input"
-                id="tamaño"
-                type="text"
-              />
-            </div>
-            <div class="col">
-              <input
-                class="text-input"
-                id="sexo"
-                type="text"
-              />
-            </div>
-            <div class="col">
-              <input
-                class="text-input"
-                id="edad"
-                type="text"
-              />
-            </div>
-            <div class="col">
-              <input
-                class="text-input"
-                id="altura"
-                type="text"
-              />
-            </div>
-            <div class="col">
-              <input
-                class="text-input"
-                id="peso"
-                type="text"
-              />
-            </div>
-            <div class="col">
-              <input
-                class="text-input"
-                id="cabello"
-                type="text"
-              />
-            </div>
-            <div class="col">
-              <input
-                class="text-input"
-                id="ojos"
-                type="text"
-              />
-            </div>
+          <div class="col">
+            <input
+              class="text-input"
+              id="deidad"
+              type="text"
+            />
+          </div>
+          <div class="col">
+            <input
+              class="text-input"
+              id="tamaño"
+              type="text"
+            />
+          </div>
+          <div class="col">
+            <input
+              class="text-input"
+              id="sexo"
+              type="text"
+            />
+          </div>
+          <div class="col">
+            <input
+              class="text-input"
+              id="edad"
+              type="text"
+            />
+          </div>
+          <div class="col">
+            <input
+              class="text-input"
+              id="altura"
+              type="text"
+            />
+          </div>
+          <div class="col">
+            <input
+              class="text-input"
+              id="peso"
+              type="text"
+            />
+          </div>
+          <div class="col">
+            <input
+              class="text-input"
+              id="cabello"
+              type="text"
+            />
+          </div>
+          <div class="col">
+            <input
+              class="text-input"
+              id="ojos"
+              type="text"
+            />
           </div>
         </div>
       </div>
+    <!-- columna 3-->
+    <div class="col">
+      <div class="row">
+        <div class="col">
+            <img src="inventario.png" class="img-responsive fit-image" />
+          </div>
+          <div class="col">
+            <img src="equip.png" class="img-responsive fit-image" />
+          </div>  
+      </div>    
     </div>
+  </div>  
 
     <!-- STATS-->
     <div class="row">
@@ -1817,9 +1834,9 @@ y permanece inconsciente.">
         </div>
       </div>
     </div>
-
+    <script src="clases.js"></script>
     <script>
-    
+    console.log(guerrero);
     //variables
       
       //Caracteristica Fuerza

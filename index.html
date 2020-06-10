@@ -7,7 +7,8 @@
       crossorigin="anonymous"
     />
 
-    <style>
+    <style>  
+     
       input.text-input {
         width: 100%;
         border: none;
@@ -214,10 +215,10 @@
     <div class="col">
       <div class="row">
         <div class="col">
-            <img src="inventario.png" class="img-responsive fit-image" />
+          <button onclick="abrirInventario()"><img src="inventario.png" class="img-responsive fit-image"/></button>
           </div>
           <div class="col">
-            <img src="equip.png" class="img-responsive fit-image" />
+            <button onclick="abrirEquipo()"><img src="equip.png" class="img-responsive fit-image"/></button>
           </div>  
       </div>    
     </div>
@@ -857,7 +858,7 @@ y permanece inconsciente.">
                    
                   </div>
                   <div class="col text-center">
-                    1ER ATAQUE
+                    1ER 
                   </div>
                   <div class="col text-center">
                     2DO ATAQUE
@@ -1836,7 +1837,7 @@ y permanece inconsciente.">
     </div>
     <script src="clases.js"></script>
     <script>
-    console.log(guerrero);
+    
     //variables
       
       //Caracteristica Fuerza
@@ -2068,7 +2069,13 @@ y permanece inconsciente.">
 
       }
       
-     
+      function abrirEquipo() {
+        var myWindow = window.open("ventanaequip.html", "", "width=400,height=500");
+      }
+
+      function abrirInventario() {
+        var myWindow = window.open("ventanainv.html", "", "width=600,height=300");
+      }
 
 
     </script>
